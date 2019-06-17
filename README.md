@@ -10,14 +10,14 @@ If you don't like Pipenv, you can also chose common tool, `pip`.
 
 ## Install dependencies
 
-*By Pipenv:*
+**By Pipenv:**
 
 ```bash
 $ pipenv shell
 $ pipenv install
 ```
 
-*By pip:*
+**By pip:**
 
 ```bash
 $ pip install requirements.txt
