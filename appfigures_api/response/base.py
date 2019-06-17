@@ -17,15 +17,14 @@ class AppFiguresGroupBy(list):
     def _retrieve_dicts(self, json, target_level, current_level=1):
         for k, v in json.iteritems():
             if current_level == target_level:
-                return v
+                self._dict_list.append(v)
             elif current_level > target_level:
                 return None
             else:
                 next_level = current_level + 1
-                target_dict = self._retrieve_dicts(v, target_level, next_level)
-
-                if target_dict is not None:
-                    self._dict_list.append(target_dict)
+                print 'next_level = {}'.format(next_level)
+                print 'v = {}'.format(v)
+                self._retrieve_dicts(v, target_level, next_level)
 
     def _transform(self, data):
         pass

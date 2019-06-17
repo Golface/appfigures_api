@@ -29,3 +29,9 @@ class TestRevenue(object):
             assert hasattr(element, 'country')
             assert hasattr(element, 'storefront')
             assert hasattr(element, 'store')
+
+    def test_init_with_two_group_by_values(self):
+        json = Response.get_revenue_json_with_two_group_by()
+        response_group_by = RevenueGroupBy(json, ['date', 'product'])
+
+        assert 8 == len(response_group_by)
