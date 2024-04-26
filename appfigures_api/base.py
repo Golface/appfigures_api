@@ -2,9 +2,7 @@ from abc import ABCMeta
 import base64
 
 
-class BaseAPIClient(object):
-    __metaclass__ = ABCMeta
-
+class BaseAPIClient(object, metaclass=ABCMeta):
     def __init__(self, base_url, requests):
         self._base_url = base_url
         self._requests = requests
