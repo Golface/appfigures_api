@@ -31,9 +31,8 @@ class BaseAPIClient(object):
         credential = '{}:{}'.format(self._username, self._password)
         headers = {
             'X-Client-Key': self._client_key,
-            'Authorization': base64.b64encode(credential)
+            'Authorization': 'Basic {}'.format(base64.b64encode(credential))
         }
 
         self._session = self._requests.Session()
         self._session.headers.update(headers)
-
