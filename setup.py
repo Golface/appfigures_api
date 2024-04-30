@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name = 'appfigures_api',
-    version = '0.0.1',
+    version = '0.0.4',
     author = 'Huang Yi-Ming',
     author_email = 'ymhuang@fmbase.tw',
     description = ('A Python API client for AppFigures'),
